@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Statistics -->
+        <div class="header">
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-label">TOTAL TASKS</span>
+                    <span class="stat-value" id="totalTasks">0</span>
+                    <div class="stat-icon total">✓</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">COMPLETED</span>
+                    <span class="stat-value completed" id="completedTasks">0</span>
+                    <div class="stat-icon completed">✓</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">PENDING</span>
+                    <span class="stat-value pending" id="pendingTasks">0</span>
+                    <div class="stat-icon pending">⏱</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">PROGRESS</span>
+                    <span class="stat-value progress" id="progressPercent">0%</span>
+                    <div class="stat-icon progress">📊</div>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar"></div>
+            </div>
+        </div>
+
+        <!-- Add Task Form -->
+        <div class="add-task-form">
+            <input type="text" id="taskInput" placeholder="Add a todo..." maxlength="100">
+            <input type="date" id="dateInput">
+            <button id="addBtn" class="add-btn">+</button>
+        </div>
+
+        <!-- Search and Filter Controls -->
+        <div class="controls">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search tasks...">
+                <span class="search-icon">🔍</span>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-btn">FILTER</button>
+                <div class="dropdown-content">
+                    <div class="dropdown-item" data-filter="all">All Tasks</div>
+                    <div class="dropdown-item" data-filter="pending">Pending</div>
+                    <div class="dropdown-item" data-filter="completed">Completed</div>
+                    <div class="dropdown-item" data-filter="today">Due Today</div>
+                    <div class="dropdown-item" data-filter="overdue">Overdue</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sort and Delete Controls -->
+        <div class="action-controls">
+            <div class="sort-container">
+                <span class="sort-icon">↕</span>
+                <select id="sortSelect">
+                    <option value="none" disabled selected>SORT</option>
+                    <option value="default">Default</option>
+                    <option value="date-desc">Date (Newest)</option>
+                    <option value="alpha-asc">A-Z</option>
+                    <option value="alpha-desc">Z-A</option>
+                    <option value="status">Status</option>
+                </select>
+            </div>
+            <button id="deleteAllBtn" class="delete-all-btn">🗑 DELETE ALL</button>
+        </div>
+
+        <!-- Task List Headers -->
+        <div class="task-headers">
+            <span class="header-task">TASK</span>
+            <span class="header-due">DUE DATE</span>
+            <span class="header-status">STATUS</span>
+            <span class="header-actions">ACTIONS</span>
+        </div>
+
+        <!-- Task List -->
+        <div class="task-list" id="taskList">
+            <!-- Tasks will be dynamically added here -->
+        </div>
+
+        <!-- Empty State -->
+        <div class="empty-state" id="emptyState">
+            <div class="empty-icon">📝</div>
+            <h3>No tasks yet</h3>
+            <p>Add your first task to get started!</p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
