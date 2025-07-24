@@ -1175,6 +1175,9 @@ body.theme-light .theme-item.active {
 body.theme-light .sort-icon {
     color: #000000;
 }
+body.theme-light .filter-icon {
+    color: #000000;
+}
 
 /* BUMBLEBEE */
 body.theme-bumblebee {
