@@ -996,6 +996,9 @@ body.theme-light .theme-item.active {
     background: #38bdf8;
     color: #fff;
 }
+body.theme-light .task-text {
+    color: #3b3b5c; /* contoh warna gelap, bisa diganti sesuai selera */
+}
 
 /* BUMBLEBEE */
 body.theme-bumblebee {
@@ -1178,6 +1181,7 @@ body.theme-light .sort-icon {
 body.theme-light .filter-icon {
     color: #000000;
 }
+body.theme-bumblebee
 
 /* BUMBLEBEE */
 body.theme-bumblebee {
@@ -1227,6 +1231,9 @@ body.theme-bumblebee .sort-icon {
 }
 body.theme-bumblebee .filter-icon {
     color: #000000;
+}
+body.theme-bumblebee .task-text {
+    color: #3b3b5c; 
 }
 
 /* NIGHT */
@@ -1444,7 +1451,9 @@ body.theme-fantasy .sort-icon {
 body.theme-fantasy .filter-icon {
     color: #6d28d9;
 }
-
+body.theme-fantasy .task-text {
+    color: #3b3b5c; 
+}
 
 /* DRACULA */
 body.theme-dracula {
@@ -1576,4 +1585,7 @@ body.theme-luxury .theme-sidebar {
 body.theme-luxury .theme-item.active {
     background: #ffd700;
     color: #201c1c;
+}
+body.theme-luxury  .task-text {
+    color:  #ffd700; /* contoh warna gelap, bisa diganti sesuai selera */
 }
