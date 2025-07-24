@@ -286,6 +286,11 @@ body {
     margin-bottom: 20px;
 }
 
+.filter-icon {
+    font-size: 18px;
+    color: #ffffff;
+}
+
 .sort-container {
     display: flex;
     align-items: center;
@@ -1156,7 +1161,7 @@ body.theme-light #searchInput {
     border-color: #e5e7eb;
 }
 body.theme-light .delete-all-btn {
-    background: linear-gradient(135deg, #ef4444, #f59e0b);
+    background: linear-gradient(135deg, #3b82f6, hsl(194, 91%, 87%));
     color: #fff;
 }
 body.theme-light .theme-sidebar {
@@ -1166,6 +1171,9 @@ body.theme-light .theme-sidebar {
 body.theme-light .theme-item.active {
     background: #38bdf8;
     color: #fff;
+}
+body.theme-light .sort-icon {
+    color: #000000;
 }
 
 /* BUMBLEBEE */
@@ -1210,6 +1218,12 @@ body.theme-bumblebee .theme-sidebar {
 body.theme-bumblebee .theme-item.active {
     background: #f59e0b;
     color: #fff;
+}
+body.theme-bumblebee .sort-icon {
+    color: #000000;
+}
+body.theme-bumblebee .filter-icon {
+    color: #000000;
 }
 
 /* NIGHT */
@@ -1299,6 +1313,12 @@ body.theme-synthwave .theme-item.active {
     background: #ff00cc;
     color: #fff;
 }
+body.theme-synthwave .sort-icon {
+    color: #ff00cc;
+}
+body.theme-synthwave .filter-icon {
+    color: #ff00cc;
+}
 
 /* HALLOWEEN */
 body.theme-halloween {
@@ -1350,43 +1370,78 @@ body.theme-fantasy {
     color: #222;
 }
 body.theme-fantasy .container {
-    background: #e0c3fc;
+    background: #f6f3ff; /* lebih soft, bukan ungu pekat */
     color: #222;
 }
 body.theme-fantasy .main-title {
-    color: #8ec5fc;
+    color: #3b3b5c;
 }
 body.theme-fantasy .add-btn {
     background: linear-gradient(135deg, #8ec5fc, #e0c3fc);
-    color: #222;
+    color: #3b3b5c;
 }
 body.theme-fantasy .header,
 body.theme-fantasy .filter-sort-bar,
 body.theme-fantasy .add-task-form,
 body.theme-fantasy .task-item,
 body.theme-fantasy .task-headers {
-    background: #e0c3fc;
+    background: #e9e5fa; /* lebih terang dan soft */
     color: #222;
 }
 body.theme-fantasy #taskInput,
 body.theme-fantasy #dateInput,
 body.theme-fantasy #searchInput {
-    background: #e0c3fc;
+    background: #e9e5fa;
     color: #222;
     border-color: #8ec5fc;
 }
 body.theme-fantasy .delete-all-btn {
     background: linear-gradient(135deg, #8ec5fc, #e0c3fc);
-    color: #222;
+    color: #3b3b5c;
 }
 body.theme-fantasy .theme-sidebar {
-    background: #e0c3fc;
-    color: #222;
+    background: #c3b1e1;
+    color: #3b3b5c;
 }
 body.theme-fantasy .theme-item.active {
     background: #8ec5fc;
-    color: #fff;
+    color: #3b3b5c;
 }
+
+/* Tambahan agar label dan value lebih kontras */
+body.theme-fantasy .stat-label,
+body.theme-fantasy .task-due {
+    color: #3b3b5c;
+}
+body.theme-fantasy .stat-value {
+    color: #6d28d9;
+}
+body.theme-fantasy .stat-value.completed {
+    color: #10b981;
+}
+body.theme-fantasy .stat-value.pending {
+    color: #f59e0b;
+}
+body.theme-fantasy .stat-value.progress {
+    color: #06b6d4;
+}
+body.theme-fantasy .status-badge.pending {
+    background: #fef3c7;
+    color: #b45309;
+    border: 1px solid #f59e0b;
+}
+body.theme-fantasy .status-badge.completed {
+    background: #d1fae5;
+    color: #065f46;
+    border: 1px solid #10b981;
+}
+body.theme-fantasy .sort-icon {
+    color: #6d28d9;
+}
+body.theme-fantasy .filter-icon {
+    color: #6d28d9;
+}
+
 
 /* DRACULA */
 body.theme-dracula {
