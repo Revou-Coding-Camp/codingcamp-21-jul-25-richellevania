@@ -260,7 +260,44 @@ class TodoApp {
         const saved = localStorage.getItem('tasks');
         this.tasks = saved ? JSON.parse(saved) : [];
     }
+
+    
 }
+
+document.querySelectorAll('.theme-item').forEach(item => {
+    item.addEventListener('click', function() {
+        // Remove active from all
+        document.querySelectorAll('.theme-item').forEach(i => i.classList.remove('active'));
+        // Add active to clicked
+        this.classList.add('active');
+        // Ganti theme di body
+        document.body.className = 'theme-' + this.dataset.theme;
+        // Jika container juga perlu diubah:
+        document.querySelector('.container').className = 'container theme-' + this.dataset.theme;
+    });
+});
+
+const themeBtn = document.getElementById('themePaletteBtn');
+const themeSidebar = document.getElementById('themeSidebar');
+
+themeBtn.addEventListener('click', function() {
+    if (themeSidebar.style.display === 'none' || themeSidebar.style.display === '') {
+        themeSidebar.style.display = 'block';
+    } else {
+        themeSidebar.style.display = 'none';
+    }
+});
+
+// Optional: klik di luar sidebar untuk menutup
+document.addEventListener('click', function(e) {
+    if (
+        themeSidebar.style.display === 'block' &&
+        !themeSidebar.contains(e.target) &&
+        e.target !== themeBtn
+    ) {
+        themeSidebar.style.display = 'none';
+    }
+});
 
 // Global variable so it can be accessed outside
 let todoApp;

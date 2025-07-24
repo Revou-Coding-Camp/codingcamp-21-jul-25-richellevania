@@ -7,6 +7,27 @@
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
+     <!-- Theme Button & Sidebar -->
+    <button class="theme-palette-btn" id="themePaletteBtn">🎨</button>
+    <div class="theme-sidebar" id="themeSidebar" style="display:none;">
+        <div class="theme-title">
+            <span>🎨</span> Theme
+        </div>
+        <ul class="theme-list">
+            <li class="theme-item active" data-theme="dark">dark</li>
+            <li class="theme-item" data-theme="light">light</li>
+            <li class="theme-item" data-theme="bumblebee">bumblebee</li>
+            <li class="theme-item" data-theme="synthwave">synthwave</li>
+            <li class="theme-item" data-theme="halloween">halloween</li>
+            <li class="theme-item" data-theme="fantasy">fantasy</li>
+            <li class="theme-item" data-theme="dracula">dracula</li>
+            <li class="theme-item" data-theme="aqua">aqua</li>
+            <li class="theme-item" data-theme="luxury">luxury</li>
+            <li class="theme-item" data-theme="night">night</li>
+        </ul>
+    </div>
+
+
     <h1 class="main-title">To-Do List</h1>
     <div class="container">
         <!-- Header with Statistics -->
@@ -37,6 +58,8 @@
                 <div class="progress-fill" id="progressBar"></div>
             </div>
         </div>
+
+       
 
         <!-- Add Task Form -->
         <div class="add-task-form">
