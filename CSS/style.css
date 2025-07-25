@@ -1279,6 +1279,9 @@ body.theme-night .theme-item.active {
     background: #6366f1;
     color: #fff;
 }
+body.theme-night .task-text {
+    color: #a5b4fc; 
+}
 
 /* SYNTHWAVE */
 body.theme-synthwave {
@@ -1329,6 +1332,9 @@ body.theme-synthwave .sort-icon {
 body.theme-synthwave .filter-icon {
     color: #ff00cc;
 }
+body.theme-synthwave .task-text {
+    color: #f7e017; 
+}
 
 /* HALLOWEEN */
 body.theme-halloween {
@@ -1372,6 +1378,9 @@ body.theme-halloween .theme-sidebar {
 body.theme-halloween .theme-item.active {
     background: #f59e0b;
     color: #fff;
+}
+body.theme-halloween .task-text {
+    color: #f59e0b; 
 }
 
 /* FANTASY */
@@ -1541,6 +1550,9 @@ body.theme-aqua .theme-sidebar {
 body.theme-aqua .theme-item.active {
     background: #7fdbda;
     color: #1e3a8a;
+}
+body.theme-aqua  .task-text {
+    color: #222;; /* contoh warna gelap, bisa diganti sesuai selera */
 }
 
 /* LUXURY */
