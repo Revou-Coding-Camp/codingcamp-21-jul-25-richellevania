@@ -305,3 +305,8 @@ let todoApp;
 document.addEventListener('DOMContentLoaded', () => {
     todoApp = new TodoApp();
 });
+
+// Tambahkan di bawah inisialisasi TodoApp atau di dalam bindEvents()
+document.getElementById('filterSelect').addEventListener('change', function(e) {
+    todoApp.filterTasks(e.target.value);
+});
